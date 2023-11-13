@@ -54,8 +54,8 @@ st.write("Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti 
 # Etapa 2: Botões com Links
 st.header("Etapa 2: Links")
 
-st.link_button("Documnetação", "https://g1.globo.com/")
-st.link_button("Endpoint SPARQL ", "https://g1.globo.com/")
+st.link_button("Documnetação", "https://aiboxlab-pne.github.io/dados/dict/serving/")
+st.link_button("Endpoint SPARQL ", "http://192.168.1.20:8890/sparql/")
 # Etapa 3: Acesso aos Dados
 st.header("Etapa 3: Acesso aos Dados")
 
