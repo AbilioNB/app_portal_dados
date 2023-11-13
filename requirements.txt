@@ -1,0 +1,4 @@
+pandas
+os
+re
+streamlit==1.28.1
