@@ -19,4 +19,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8501
 
 # Comando para executar o aplicativo Streamlit
-CMD ["streamlit", "run", "nome_do_arquivo_streamlit.py"]
+CMD ["streamlit", "run", "app.py"]
