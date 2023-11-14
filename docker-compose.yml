@@ -3,9 +3,9 @@ version: '3.8'
 services:
     app:
         build: ./
-        command: streamlit run app/main.py --server.port 8501
-        tty: true
-        restart: unless-stopped
+        # command: streamlit run app/main.py --server.port 8501
+        # tty: true
+        # restart: unless-stopped
         volumes:
             - ./:/usr/src/app
         ports:
