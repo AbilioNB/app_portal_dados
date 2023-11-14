@@ -4,8 +4,10 @@ services:
     app:
         build: ./
         command: streamlit run app/main.py --server.port 8501
+        tty: true
+        restart: unless-stopped
         volumes:
             - ./:/usr/src/app
         ports:
             - 8501:8501
-        image: yourstreamlitapp:latest
+        image: portaldados:latest
