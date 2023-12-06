@@ -71,6 +71,13 @@ def selecionar_tipo_bases(op):
          return ['MUNIC','Atlas BR 2019']
 
 def dados_publicos():
+    
+    dados_orcamento_fake = {
+    'Ano': [2020, 2020, 2021, 2021, 2022, 2022],
+    'Mês': ['Janeiro', 'Fevereiro', 'Janeiro', 'Fevereiro', 'Janeiro', 'Fevereiro'],
+    'Receitas': [100000, 120000, 110000, 130000, 105000, 125000],
+    'Despesas': [80000, 90000, 85000, 95000, 88000, 92000]}
+    df = pd.DataFrame(dados_orcamento_fake)
     st.header("Microdados públicos")
 
     st.write("Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Bota 1 metro de cachacis aí pra viagem! Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies.")
@@ -95,4 +102,4 @@ def dados_publicos():
 
     bases_tipo = selecionar_tipo_bases(select_tipo_dados)
     base_selecionada = st.selectbox("Selecione", bases_tipo)
-
+    baixar_base(df,df.head())

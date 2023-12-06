@@ -12,11 +12,21 @@ st.write("Metas: Os resultados das metas e indicadores.")
 st.write("Microdados: Os dados públicos que foram utilizados para o cálculo das metas.")
 st.link_button("Documnetação", "https://aiboxlab-pne.github.io/dados/dict/serving/")
 
-tipo_camada_dados = ["Metas e Indicadores", "Microdados"]
-select_tipo_camada_dados = st.selectbox("Selecione", tipo_camada_dados)
+# tipo_camada_dados = ["Metas e Indicadores", "Microdados"]
+# select_tipo_camada_dados = st.selectbox("Selecione", tipo_camada_dados)
 
-if select_tipo_camada_dados=="Metas e Indicadores":
+container_metas = st.container()
+with container_metas:
     metas_indicadores()
-else:
+
+container_microdados = st.container()
+with container_microdados:
     dados_publicos()
+
+
+
+# if select_tipo_camada_dados=="Metas e Indicadores":
+#     metas_indicadores()
+# else:
+#     dados_publicos()
 
