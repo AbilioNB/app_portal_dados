@@ -1,11 +1,11 @@
 import streamlit as st
-import pandas as pd
-import os, re
-from app_func import *
+from app_func import metas_indicadores, dados_publicos
 PATH_BASES = 'data'
 
 
 st.title("ConectaPNE: Dados")
+st.write("Os conjuntos de dados adotados nos conjuntos de dados do Conecta PNE são: dados educacionais; dados socioeconômicos; dados contábeis; e dados populacionais.") 
+st.write("Como principais fontes destes dados temos: o INEP para os dados educacionais; o AtlasBR para dados socioeconômicos; o IBGE para os dados bases de estimativas populacionais; o DataSUS para estimativas populacionais a partir das bases de nascimentos e mortalidade; o Geocapes para dados de titulações de mestrado e doutorado; e o Siconfi com informações contábeis e fiscais.")
 st.header("Acesso aos dados ")
 st.write("Escolha entre os tipos de dados:")
 st.write("Metas: Os resultados das metas e indicadores.")
@@ -29,4 +29,3 @@ with container_microdados:
 #     metas_indicadores()
 # else:
 #     dados_publicos()
-
