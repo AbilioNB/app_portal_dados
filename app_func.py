@@ -47,13 +47,13 @@ def metas_indicadores():
     # Filtros
     bases_disponiveis = listar_arquivos_em_pasta(PATH_BASES)
     base_options = list(bases_disponiveis.keys())
-    base_selected = st.sidebar.selectbox("Selecione a Base", base_options)
+    base_selected = st.selectbox("Selecione a Base", base_options)
     # Exemplo da base
     df = pd.read_parquet(bases_disponiveis[base_selected])
     if "ANO" in df.columns:
             ano_inicial = df.ANO.min()
             ano_final = df.ANO.max()
-            ano_inicial_consulta, ano_final_consulta= st.sidebar.select_slider('Selecione a faixa temporal',
+            ano_inicial_consulta, ano_final_consulta= st.select_slider('Selecione a faixa temporal',
                                                 options=transformar_em_string(ano_inicial, ano_final),
                                                 value=(transformar_em_string(ano_inicial, ano_final)[0], transformar_em_string(ano_inicial, ano_final)[-1]))
             df = df.loc[(df['ANO'] >= int(ano_inicial_consulta)) & (df['ANO'] <= int(ano_final_consulta))]
