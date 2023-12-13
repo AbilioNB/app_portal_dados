@@ -44,6 +44,7 @@ def selecionar_ano(df):
     return df_selecionado
 def metas_indicadores():
     st.header("Metas e Indicadores")
+    st.write("Aqui temos os resultados dos indicadores por cada meta definida pelo PNE. A fórmula de cálculo pode ser encontrada na ficha ténica correspondente a meta. ")
     # Filtros
     bases_disponiveis = listar_arquivos_em_pasta(PATH_BASES)
     base_options = list(bases_disponiveis.keys())
@@ -80,8 +81,8 @@ def dados_publicos():
     df = pd.DataFrame(dados_orcamento_fake)
     st.header("Microdados públicos")
 
-    st.write("Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Bota 1 metro de cachacis aí pra viagem! Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies.")
-    st.write("Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Bota 1 metro de cachacis aí pra viagem! Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies.")
+    
+    st.write("Aqui são disponibilizados os microdados que são nescessários para o cálculo das metas apresentadas. Nem todas as colunas são utilizadas para o cáculo ou enriquecimento dos dados, para mais informações consultar a ficha técnica de cada meta.")
 
 
     st.subheader("Educacional")

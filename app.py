@@ -4,21 +4,24 @@ PATH_BASES = 'data'
 
 
 st.title("ConectaPNE: Dados")
-st.write("Os conjuntos de dados adotados nos conjuntos de dados do Conecta PNE são: dados educacionais; dados socioeconômicos; dados contábeis; e dados populacionais.") 
+st.write("Os conjuntos de dados aqui apresentados são as bases de dados do portal ConectaPNE, os dados são responsáveis pelo calculo das metas exibidas no portal.")
+ 
 st.write("Como principais fontes destes dados temos: o INEP para os dados educacionais; o AtlasBR para dados socioeconômicos; o IBGE para os dados bases de estimativas populacionais; o DataSUS para estimativas populacionais a partir das bases de nascimentos e mortalidade; o Geocapes para dados de titulações de mestrado e doutorado; e o Siconfi com informações contábeis e fiscais.")
-st.header("Acesso aos dados ")
-st.write("Escolha entre os tipos de dados:")
-st.write("Metas: Os resultados das metas e indicadores.")
-st.write("Microdados: Os dados públicos que foram utilizados para o cálculo das metas.")
+# st.header("Acesso aos dados ")
+st.divider()
+st.header("Categorias de dados disponíveis:")
+st.write("Metas: Os resultados das metas e indicadores que possam ser filtrados por ano. ")
+st.write("Microdados: Os dados públicos que foram parcialmente processados para o cálculo das metas que são exibidas no sistema.")
+st.write("Disponibilizamos também a documentação das bases e a ficha técnica ilustrando como foi cálculado cada indicador.")
 st.link_button("Documnetação", "https://aiboxlab-pne.github.io/dados/dict/serving/")
-
+st.link_button("Fichas Ténicas", "https://aiboxlab-pne.github.io/dados/meta/01/")
 # tipo_camada_dados = ["Metas e Indicadores", "Microdados"]
 # select_tipo_camada_dados = st.selectbox("Selecione", tipo_camada_dados)
-
+st.divider()
 container_metas = st.container()
 with container_metas:
     metas_indicadores()
-
+st.divider()
 container_microdados = st.container()
 with container_microdados:
     dados_publicos()
