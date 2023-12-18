@@ -26,4 +26,7 @@ container_microdados = st.container()
 with container_microdados:
     dados_publicos()
 st.divider()
-st.header("How to use")
+st.header("Exemplos de uso")
+st.link_button("1-Como carregar e abrir arquivos .parquet.","https://colab.google/")
+st.link_button("2-Como unir bases de metas para meu município.","https://colab.google/")
+st.link_button("3-Como selecionar as escolas da minha localidade nos dados do censo da educação básica.","https://colab.google/")
