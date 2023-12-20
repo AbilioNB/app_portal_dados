@@ -83,18 +83,18 @@ def dados_publicos():
 
     
     st.write("Aqui são disponibilizados os microdados que são nescessários para o cálculo das metas apresentadas. Nem todas as colunas são utilizadas para o cáculo ou enriquecimento dos dados, para mais informações consultar a ficha técnica de cada meta.")
+    st.write("Os microdados públicos são divididos em categorias, na Educacional, são encontrados as bazes diretamente ligadas educação, na Populacional, as bases que apoiam a projeção populacional e outras informações geográficas, por último temos Outros Microdados públicos, que envolvem outros dados como indicadores socioeconômico e faixas de renda.  ")
+
+    # st.subheader("Educacional")
+    # st.write("Lista das bases educacionais utilizadas para as metas.")
 
 
-    st.subheader("Educacional")
-    st.write("Lista das bases educacionais utilizadas para as metas.")
+    # st.subheader("Populacional")
+    # st.write("Lista das bases populacionais e do IBGE.")
 
 
-    st.subheader("Populacional")
-    st.write("Lista das bases populacionais e do IBGE.")
-
-
-    st.subheader("Outros dados públicos")
-    st.write("Aqui temos a lista de outros dados públicos utilizados nesse projeto")
+    # st.subheader("Outros dados públicos")
+    # st.write("Aqui temos a lista de outros dados públicos utilizados nesse projeto")
 
     tipo_dados = ["Educacional", "Populacional", "Outros dados públicos"]
     select_tipo_dados = st.selectbox("Selecione", tipo_dados)
